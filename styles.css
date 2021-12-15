@@ -1,1 +1,72 @@
-/*Maak hier jouw CSS!*/
+/*Dit is de mobile Grid.*/
+.container{
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px ;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside-1"
+    "aside-2"
+    "aside-3"
+    " . "
+    "footer";
+    grid-gap: 16px;
+    padding: 16px;
+    }
+
+.grid-item{
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
+#header{
+
+    grid-area: header;
+
+}
+#main{
+    grid-area: main;
+
+}
+
+#aside-1{
+    grid-area: aside-1;
+
+}
+
+#aside-2{
+    grid-area: aside-2;
+
+}
+
+#aside-3{
+    grid-area: aside-3;
+}
+
+#footer{
+    grid-area: footer;
+
+}
+
+@media screen and (min-width: 576px) {
+    /*Dit is de desktop Grid.*/
+    .container{
+        background-color: blanchedalmond;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+    "header aside-1 aside-1"
+    "main aside-1 aside-1"
+    "main aside-2 aside-3"
+    "main aside-2 ."
+    "footer footer footer";
+        grid-gap: 16px;
+        padding: 16px;
+    }
+}
